@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 3, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 15, "column": 0}, "map": {"version":3,"sources":["file:///data/Squarelight/soomgo-clone/src/app/page.tsx"],"sourcesContent":["export default function Home() {\n  return (\n    <div className=\"flex flex-col items-center justify-center min-h-screen py-2\">\n      <main className=\"flex flex-col items-center justify-center flex-1 px-20 text-center\">\n        <h1 className=\"text-6xl font-bold\">\n          Welcome to{' '}\n          <a className=\"text-blue-600\" href=\"#\">\n            Soomgo Clone\n          </a>\n        </h1>\n\n        <p className=\"mt-3 text-2xl\">\n          Find and hire the best instructors for your needs.\n        </p>\n      </main>\n    </div>\n  );\n}\n\n"],"names":[],"mappings":";;;;;;AAAe,SAAS;IACtB,qBACE,8OAAC;QAAI,WAAU;kBACb,cAAA,8OAAC;YAAK,WAAU;;8BACd,8OAAC;oBAAG,WAAU;;wBAAqB;wBACtB;sCACX,8OAAC;4BAAE,WAAU;4BAAgB,MAAK;sCAAI;;;;;;;;;;;;8BAKxC,8OAAC;oBAAE,WAAU;8BAAgB;;;;;;;;;;;;;;;;;AAMrC","debugId":null}}]
+}

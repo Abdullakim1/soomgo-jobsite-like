@@ -1,26 +1,36 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground-rgb: 15, 23, 42; /* slate-900 */
+    --background-rgb: 248, 250, 252; /* slate-50 */
+  }
+
+  body {
+    color: rgb(var(--foreground-rgb));
+    background: rgb(var(--background-rgb));
+    font-family: 'Inter', -apple-system, sans-serif;
+    line-height: 1.5;
+  }
+
+  h1 {
+    font-size: 2.25rem; /* equivalent to text-4xl */
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  button, input {
+    font-family: inherit;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.container {
+  width: 100%;
+  max-width: 80rem; /* equivalent to max-w-7xl */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }

@@ -1,0 +1,3 @@
+{
+  "/api/checkout_sessions/route": "app/api/checkout_sessions/route.js"
+}

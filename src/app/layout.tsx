@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import Header from '@/components/Header';
+import { Header } from '@/components/Header';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -14,14 +14,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-gray-100 text-gray-900">
+      <body className="min-h-screen bg-slate-50">
         <Header />
-        <main className="min-h-screen flex flex-col items-center pt-16">
+        <main className="container py-8">
           {children}
         </main>
       </body>
     </html>
   );
 }
-
-
