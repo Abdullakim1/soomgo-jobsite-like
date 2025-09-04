@@ -37,9 +37,6 @@
       --tw-drop-shadow-alpha: 100%;
       --tw-drop-shadow-size: initial;
       --tw-duration: initial;
-      --tw-scale-x: 1;
-      --tw-scale-y: 1;
-      --tw-scale-z: 1;
     }
 
     ::backdrop {
@@ -78,11 +75,20 @@
       --tw-drop-shadow-alpha: 100%;
       --tw-drop-shadow-size: initial;
       --tw-duration: initial;
-      --tw-scale-x: 1;
-      --tw-scale-y: 1;
-      --tw-scale-z: 1;
     }
   }
+}
+
+.sr-only {
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  position: absolute;
+  overflow: hidden;
 }
 
 .absolute {
@@ -108,6 +114,10 @@
 
 .z-50 {
   z-index: 50;
+}
+
+.col-span-2 {
+  grid-column: span 2 / span 2;
 }
 
 .container {
@@ -152,10 +162,6 @@
 
 .table {
   display: table;
-}
-
-.h-full {
-  height: 100%;
 }
 
 .h-screen {
@@ -263,11 +269,6 @@
   background-image: linear-gradient(var(--tw-gradient-stops));
 }
 
-.bg-gradient-to-r {
-  --tw-gradient-position: to right in oklab;
-  background-image: linear-gradient(var(--tw-gradient-stops));
-}
-
 .bg-clip-text {
   -webkit-background-clip: text;
   background-clip: text;
@@ -352,17 +353,6 @@
   transition-duration: var(--tw-duration, 0s);
 }
 
-.transition-transform {
-  transition-property: transform, translate, scale, rotate;
-  transition-timing-function: var(--tw-ease, ease);
-  transition-duration: var(--tw-duration, 0s);
-}
-
-.duration-200 {
-  --tw-duration: .2s;
-  transition-duration: .2s;
-}
-
 .duration-300 {
   --tw-duration: .3s;
   transition-duration: .3s;
@@ -384,15 +374,6 @@
 
 .file\:bg-transparent::file-selector-button {
   background-color: rgba(0, 0, 0, 0);
-}
-
-@media (hover: hover) {
-  .hover\:scale-105:hover {
-    --tw-scale-x: 105%;
-    --tw-scale-y: 105%;
-    --tw-scale-z: 105%;
-    scale: var(--tw-scale-x) var(--tw-scale-y);
-  }
 }
 
 @media (hover: hover) {
@@ -691,24 +672,6 @@
 @property --tw-duration {
   syntax: "*";
   inherits: false
-}
-
-@property --tw-scale-x {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
-}
-
-@property --tw-scale-y {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
-}
-
-@property --tw-scale-z {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
 }
 
 /*# sourceMappingURL=src_app_globals_css_bad6b30c._.single.css.map*/
