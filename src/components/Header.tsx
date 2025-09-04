@@ -1,36 +1,52 @@
 import Link from 'next/link';
+import { Button } from "@/components/ui/button";
+import { Sparkles, LogIn, ArrowRight } from 'lucide-react';
 
-export function Header() {
+const Header = () => {
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-sm">
-      <div className="container flex h-16 items-center justify-between">
-        <Link href="/" className="text-xl font-bold text-slate-900">
-          InstructorMatch
-        </Link>
-        
-        <nav className="flex items-center gap-6">
-          <Link 
-            href="/jobs" 
-            className="text-sm font-medium text-slate-600 hover:text-slate-900"
-          >
-            Browse Jobs
+    <header className="border-b bg-background/95 backdrop-blur-sm sticky top-0 z-50">
+      <div className="container mx-auto px-4 py-3 flex justify-between items-center">
+        <div className="flex items-center gap-8">
+          <Link href="/" className="flex items-center gap-3 group">
+            <Sparkles className="h-6 w-6 text-primary" />
+            <span className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">Soomgo</span>
           </Link>
-          <div className="flex items-center gap-4">
-            <Link
-              href="/signin"
-              className="rounded-md px-4 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100"
+          
+          <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
+            <Link 
+              href="/jobs" 
+              className="text-muted-foreground hover:text-primary transition-colors duration-200"
             >
-              Sign In
+              Browse Jobs
             </Link>
-            <Link
-              href="/signup"
-              className="rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700"
+            <Link 
+              href="/how-it-works" 
+              className="text-muted-foreground hover:text-primary transition-colors duration-200"
             >
-              Get Started
+              How It Works
             </Link>
-          </div>
-        </nav>
+            <Link 
+              href="/become-a-provider" 
+              className="text-muted-foreground hover:text-primary transition-colors duration-200"
+            >
+              Become a Provider
+            </Link>
+          </nav>
+        </div>
+        
+        <div className="flex items-center gap-2">
+                    <Button variant="ghost" className="flex items-center gap-2">
+            <LogIn className="h-4 w-4" />
+            Sign In
+          </Button>
+          <Button className="rounded-full flex items-center gap-2">
+            Get Started
+            <ArrowRight className="h-4 w-4" />
+          </Button>
+        </div>
       </div>
     </header>
-  );
+  )
 }
+
+export default Header;

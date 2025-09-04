@@ -1,16 +1,21 @@
 {
   "pages": {
     "/jobs/page": [
-      "static/chunks/ff1a16fafef87110.js",
-      "static/chunks/7dd66bdf8a7e5707.js",
-      "static/chunks/a5196e0b2ba7a278.js",
-      "static/chunks/023c609259008aaf.css",
-      "static/chunks/aaea1e64ef7e0faa.js",
-      "static/chunks/5daf9879421e1556.js",
-      "static/chunks/50f9503f16d44625.js",
-      "static/chunks/7d6f85aa3cd5f6a1.js",
-      "static/chunks/8de370c3cbabf345.js",
-      "static/chunks/turbopack-56c4482c82229e8f.js"
+      "static/chunks/node_modules_next_dist_8db7fb1f._.js",
+      "static/chunks/src_app_favicon_ico_mjs_243aa161._.js",
+      "static/chunks/[root-of-the-server]__f6202ce6._.css",
+      "static/chunks/node_modules_next_dist_02409dcd._.js",
+      "static/chunks/src_app_layout_tsx_0a548d63._.js",
+      "static/chunks/node_modules_next_dist_client_components_builtin_global-error_0b7fde43.js",
+      "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_57d40746._.js",
+      "static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js",
+      "static/chunks/node_modules_next_dist_compiled_next-devtools_index_a9cb0712.js",
+      "static/chunks/node_modules_next_dist_compiled_5150ccfd._.js",
+      "static/chunks/node_modules_next_dist_client_cf1d9188._.js",
+      "static/chunks/node_modules_next_dist_b0daae9a._.js",
+      "static/chunks/node_modules_@swc_helpers_cjs_b3dc30d6._.js",
+      "static/chunks/_a0ff3932._.js",
+      "static/chunks/turbopack-_cdba956c._.js"
     ]
   }
 }

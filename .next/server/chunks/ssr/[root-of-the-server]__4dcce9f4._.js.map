@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 3, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 15, "column": 0}, "map": {"version":3,"sources":["file:///data/Squarelight/soomgo-clone/src/app/confirm-email/page.tsx"],"sourcesContent":["export default function ConfirmEmailPage() {\n  return (\n    <div className=\"flex items-center justify-center min-h-screen bg-gray-50\">\n      <div className=\"w-full max-w-md p-8 space-y-8 text-center bg-white rounded-lg shadow-md\">\n        <h2 className=\"text-2xl font-bold\">Check your email</h2>\n        <p className=\"text-gray-600\">\n          We've sent a confirmation link to your email address. Please click the\n          link to complete your registration.\n        </p>\n      </div>\n    </div>\n  );\n}\n"],"names":[],"mappings":";;;;;;AAAe,SAAS;IACtB,qBACE,8OAAC;QAAI,WAAU;kBACb,cAAA,8OAAC;YAAI,WAAU;;8BACb,8OAAC;oBAAG,WAAU;8BAAqB;;;;;;8BACnC,8OAAC;oBAAE,WAAU;8BAAgB;;;;;;;;;;;;;;;;;AAOrC","debugId":null}}]
+}
