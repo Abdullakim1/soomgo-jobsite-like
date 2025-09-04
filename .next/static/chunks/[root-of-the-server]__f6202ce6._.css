@@ -80,6 +80,9 @@
 @layer properties {
   @supports (((-webkit-hyphens: none)) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color: rgb(from red r g b)))) {
     *, :before, :after {
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-translate-z: 0;
       --tw-divide-y-reverse: 0;
       --tw-border-style: solid;
       --tw-leading: initial;
@@ -112,13 +115,15 @@
       --tw-drop-shadow-alpha: 100%;
       --tw-drop-shadow-size: initial;
       --tw-duration: initial;
-      --tw-content: "";
       --tw-scale-x: 1;
       --tw-scale-y: 1;
       --tw-scale-z: 1;
     }
 
     ::backdrop {
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-translate-z: 0;
       --tw-divide-y-reverse: 0;
       --tw-border-style: solid;
       --tw-leading: initial;
@@ -151,7 +156,6 @@
       --tw-drop-shadow-alpha: 100%;
       --tw-drop-shadow-size: initial;
       --tw-duration: initial;
-      --tw-content: "";
       --tw-scale-x: 1;
       --tw-scale-y: 1;
       --tw-scale-z: 1;
@@ -170,6 +174,10 @@
 .sticky {
   position: -webkit-sticky;
   position: sticky;
+}
+
+.top-1\/2 {
+  top: 50%;
 }
 
 .z-10 {
@@ -248,12 +256,17 @@
   flex-grow: 1;
 }
 
-.cursor-pointer {
-  cursor: pointer;
+.-translate-y-1\/2 {
+  --tw-translate-y: calc(calc(1 / 2 * 100%) * -1);
+  translate: var(--tw-translate-x) var(--tw-translate-y);
 }
 
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -311,11 +324,6 @@
   border-bottom-width: 1px;
 }
 
-.border-none {
-  --tw-border-style: none;
-  border-style: none;
-}
-
 .border-transparent {
   border-color: rgba(0, 0, 0, 0);
 }
@@ -330,11 +338,6 @@
 
 .bg-gradient-to-b {
   --tw-gradient-position: to bottom in oklab;
-  background-image: linear-gradient(var(--tw-gradient-stops));
-}
-
-.bg-gradient-to-br {
-  --tw-gradient-position: to bottom right in oklab;
   background-image: linear-gradient(var(--tw-gradient-stops));
 }
 
@@ -375,10 +378,6 @@
 
 .text-\[hsl\(var\(--destructive-foreground\)\)\] {
   color: hsl(var(--destructive-foreground));
-}
-
-.text-\[hsl\(var\(--foreground\)\)\] {
-  color: hsl(var(--foreground));
 }
 
 .text-\[hsl\(var\(--primary\)\)\] {
@@ -431,12 +430,6 @@
   transition-duration: var(--tw-duration, 0s);
 }
 
-.transition-shadow {
-  transition-property: box-shadow;
-  transition-timing-function: var(--tw-ease, ease);
-  transition-duration: var(--tw-duration, 0s);
-}
-
 .transition-transform {
   transition-property: transform, translate, scale, rotate;
   transition-timing-function: var(--tw-ease, ease);
@@ -471,24 +464,6 @@
   background-color: rgba(0, 0, 0, 0);
 }
 
-.after\:absolute:after {
-  content: var(--tw-content);
-  position: absolute;
-}
-
-.after\:transition-all:after {
-  content: var(--tw-content);
-  transition-property: all;
-  transition-timing-function: var(--tw-ease, ease);
-  transition-duration: var(--tw-duration, 0s);
-}
-
-.after\:duration-300:after {
-  content: var(--tw-content);
-  --tw-duration: .3s;
-  transition-duration: .3s;
-}
-
 @media (hover: hover) {
   .hover\:scale-105:hover {
     --tw-scale-x: 105%;
@@ -508,13 +483,6 @@
   .hover\:underline:hover {
     -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
-  }
-}
-
-@media (hover: hover) {
-  .hover\:after\:w-full:hover:after {
-    content: var(--tw-content);
-    width: 100%;
   }
 }
 
@@ -610,6 +578,24 @@
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
   }
+}
+
+@property --tw-translate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --tw-translate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --tw-translate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
 }
 
 @property --tw-divide-y-reverse {
@@ -783,12 +769,6 @@
 @property --tw-duration {
   syntax: "*";
   inherits: false
-}
-
-@property --tw-content {
-  syntax: "*";
-  inherits: false;
-  initial-value: "";
 }
 
 @property --tw-scale-x {
